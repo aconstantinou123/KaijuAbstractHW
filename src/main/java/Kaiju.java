@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public abstract class Kaiju {
 
     private String name;
@@ -38,7 +40,36 @@ public abstract class Kaiju {
         return "ROAAAAAAR!";
     }
 
-    public abstract void attack(Vehicle vehicle);
+    public String attack(Vehicle vehicle) {
+        String result = new String();
+        int attackPower = vehicle.getHealthValue() - getAttackValue();
+        vehicle.setHealthValue(attackPower);
+        if (vehicle.getHealthValue() <= 0) {
+           result = vehicle.getType() + " has been destroyed";
+           vehicle.setType(Type.DESTROYED);
+        }
+        else {
+            result = this.getName() + " hits the " + vehicle.getType() + " for " + getAttackValue() + " points of damage";
+        }
+        return result;
+    }
+
+    public String attackNumber(int vehicleNumber, Vehicles vehicles) {
+        String result = new String();
+        for (Vehicle vehicle : vehicles.getVehicles()) {
+            if (vehicleNumber == vehicle.getVehicleNumber()) {
+                int attackPower = vehicle.getHealthValue() - getAttackValue();
+                vehicle.setHealthValue(attackPower);
+                if (vehicle.getHealthValue() <= 0) {
+                    result = vehicle.getType() + " has been destroyed";
+                    vehicle.setType(Type.DESTROYED);
+                } else {
+                    result = this.getName() + " hits the " + vehicle.getType() + " for " + getAttackValue() + " points of damage";
+                }
+            }
+        }
+        return result;
+    }
 
     public abstract String move();
 }

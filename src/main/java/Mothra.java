@@ -4,10 +4,6 @@ public class Mothra extends Kaiju {
         super(name, healthVaule, attackValue);
     }
 
-    public void attack(Vehicle vehicle){
-
-    }
-
     public String move(){
         return "Mothra flys high into the sky!";
     }

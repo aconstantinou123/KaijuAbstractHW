@@ -5,6 +5,6 @@ public class Mothra extends Kaiju {
     }
 
     public String move(){
-        return "Mothra flys high into the sky!";
+        return "Mothra flys high into the sky before diving towards another vehicle!";
     }
 }

@@ -32,12 +32,12 @@ public class KaijuTest {
 
     @Test
     public void godzillacanMove() {
-        assertEquals("Godzilla stomps his feet!", godzilla1.move());
+        assertEquals("Godzilla stomps his feet and moves towards another vehicle!", godzilla1.move());
     }
 
     @Test
     public void mothraCanMove() {
-        assertEquals("Mothra flys high into the sky!", mothra1.move());
+        assertEquals("Mothra flys high into the sky before diving towards another vehicle!", mothra1.move());
     }
 
     @Test

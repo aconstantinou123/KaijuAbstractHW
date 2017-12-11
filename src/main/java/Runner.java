@@ -50,26 +50,30 @@ public class Runner {
                 case "1":
                     String answer;
                     do {
-                        System.out.println("Type a vehicle number to attack");
+                        System.out.println("Type a vehicle number to attack \n");
                         System.out.println(vehicles.seeAllVehicles());
                         Integer input2 = Integer.parseInt(scanner.nextLine());
                         System.out.println(mothra.attack(input2, vehicles));
                         System.out.println(vehicles.allDestroyed());
                         System.out.println("Press any key to attack again or q to quit");
                         answer = scanner.nextLine();
+                        System.out.println(mothra.move());
+                        System.out.println(mothra.roar() + "\n");
                     } while (!answer.equals("q"));
                 break;
 
                 case "2":
                     String answer2;
                     do {
-                        System.out.println("Type a vehicle number to attack");
+                        System.out.println("Type a vehicle number to attack \n");
                         System.out.println(vehicles.seeAllVehicles());
                         Integer input2 = Integer.parseInt(scanner.nextLine());
                         System.out.println(godzilla.attack(input2, vehicles));
                         System.out.println(vehicles.allDestroyed());
                         System.out.println("Press any key to attack again or q to quit");
                         answer2 = scanner.nextLine();
+                        System.out.println(godzilla.move());
+                        System.out.println(godzilla.roar()+ "\n");
                     } while (!answer2.equals("q"));
                     break;
 

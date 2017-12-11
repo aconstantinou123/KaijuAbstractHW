@@ -5,7 +5,7 @@ public class Godzilla extends Kaiju {
     }
 
     public String move(){
-        return "Godzilla stomps his feet!";
+        return "Godzilla stomps his feet and moves towards another vehicle!";
     }
 
 

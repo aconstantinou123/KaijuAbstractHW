@@ -3,15 +3,21 @@ public abstract class Vehicle {
     private Type type;
     private int healthValue;
     private int vehicleNumber;
+    private String vehicle;
 
-    protected Vehicle(Type type, int healthValue, int vehicleNumber) {
+    protected Vehicle(Type type, int healthValue, int vehicleNumber, String vehicle) {
         this.type = type;
         this.healthValue = healthValue;
         this.vehicleNumber = vehicleNumber;
+        this.vehicle = vehicle;
     }
 
     public String getType() {
-        return type.type;
+        return this.type.type + " " + vehicle + " " + getVehicleNumber();
+    }
+
+    public String getTypeRegular() {
+        return this.type.type;
     }
 
     public int getVehicleNumber() {

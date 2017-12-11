@@ -2,7 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+
 
 public class VehicleTest {
 
@@ -11,8 +11,8 @@ public class VehicleTest {
 
     @Before
     public void before(){
-        humvee1 = new Humvee(Type.SOVIET, 100, 001);
-        huey = new Huey(Type.CIVILIAN, 50, 002);
+        humvee1 = new Humvee(Type.SOVIET, 100, 001, "Humvee");
+        huey = new Huey(Type.CIVILIAN, 50, 002, "Huey");
     }
 
     @Test

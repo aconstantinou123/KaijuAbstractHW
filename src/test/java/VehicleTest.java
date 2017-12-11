@@ -17,12 +17,12 @@ public class VehicleTest {
 
     @Test
     public void canGetHumveeType() {
-        assertEquals("Soviet Humvee 1", humvee1.getType());
+        assertEquals("Soviet Humvee 1", humvee1.getFullDescription());
     }
 
     @Test
     public void canHueyType() {
-        assertEquals("Civilian Huey 2", huey.getType());
+        assertEquals("Civilian Huey 2", huey.getFullDescription());
     }
 
     @Test

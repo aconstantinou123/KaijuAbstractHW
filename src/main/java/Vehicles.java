@@ -28,7 +28,7 @@ public class Vehicles {
     public String seeAllVehicles(){
         ArrayList<String> list = new ArrayList<>();
         for (Vehicle vehicle : vehicles){
-            list.add(String.format("%s \n", vehicle.getType()));
+            list.add(String.format("%s \n", vehicle.getFullDescription()));
         }
         String result = String.join("", list);
         return result;
@@ -38,7 +38,7 @@ public class Vehicles {
         String result = new String();
         ArrayList<Vehicle> destroyedVehicles = new ArrayList<>();
         for (Vehicle vehicle : vehicles){
-            if (vehicle.getTypeRegular() == "Destroyed"){
+            if (vehicle.getType() == "Destroyed"){
                 destroyedVehicles.add(vehicle);
             }
         }

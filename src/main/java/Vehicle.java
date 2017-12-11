@@ -12,11 +12,11 @@ public abstract class Vehicle {
         this.vehicle = vehicle;
     }
 
-    public String getType() {
+    public String getFullDescription() {
         return this.type.type + " " + vehicle + " " + getVehicleNumber();
     }
 
-    public String getTypeRegular() {
+    public String getType() {
         return this.type.type;
     }
 
@@ -39,5 +39,6 @@ public abstract class Vehicle {
     public void setHealthValue(int healthValue) {
         this.healthValue = healthValue;
     }
+
 
 }

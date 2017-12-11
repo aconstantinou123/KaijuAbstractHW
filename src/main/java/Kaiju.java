@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public abstract class Kaiju {
 
     private String name;
@@ -47,10 +45,10 @@ public abstract class Kaiju {
                 int attackPower = vehicle.getHealthValue() - getAttackValue();
                 vehicle.setHealthValue(attackPower);
                 if (vehicle.getHealthValue() <= 0) {
-                    result = vehicle.getType() + " has been destroyed";
+                    result = vehicle.getFullDescription() + " has been destroyed";
                     vehicle.setType(Type.DESTROYED);
                 } else {
-                    result = this.getName() + " hits the " + vehicle.getType() + " for " + getAttackValue() + " points of damage";
+                    result = this.getName() + " hits the " + vehicle.getFullDescription() + " for " + getAttackValue() + " points of damage";
                 }
             }
         }

@@ -44,8 +44,7 @@ public class Runner {
         do {
             System.out.println("Welcome to Kaiju fight. Please choose your monster");
             System.out.println("1. Mothra \n2. Godzilla");
-            String input = scanner.nextLine().toLowerCase();
-            choice = input;
+            choice = scanner.nextLine().toLowerCase();
             switch (choice) {
 
                 case "1":

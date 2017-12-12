@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 
 public class VehicleTest {
@@ -29,6 +30,13 @@ public class VehicleTest {
     public void canSetHealth() {
         huey.setHealthValue(100);
         assertEquals(100, huey.getHealthValue());
+    }
+
+    @Test
+    public void canGetRandomAttackValue() {
+        humvee1.setrandomAttackStrength();
+        huey.setrandomAttackStrength();
+        assertNotEquals(humvee1.getAttackStrength(), huey.getAttackStrength());
     }
 
 }

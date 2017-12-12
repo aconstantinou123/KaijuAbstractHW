@@ -55,5 +55,11 @@ public abstract class Kaiju {
         return result;
     }
 
+    public void checkDeath() {
+        if(this.getHealthValue() <= 0){
+            System.exit(0);
+        }
+    }
+
     public abstract String move();
 }

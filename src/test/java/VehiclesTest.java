@@ -62,4 +62,10 @@ public class VehiclesTest {
         vehicles.addVehicle(huey2);
         assertEquals("All vehicles destroyed", vehicles.allDestroyed());
     }
+
+//    @Test
+//    public void canAttack(){
+//        humvee1.attack(godzilla1);
+//        assertEquals(700, godzilla1.getHealthValue());
+//    }
 }

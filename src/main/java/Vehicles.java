@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Vehicles {
 
@@ -47,5 +48,11 @@ public class Vehicles {
             result =  "All vehicles destroyed";
         }
         return result;
+    }
+
+    public Vehicle getRandomVehicle(){
+        Random rand = new Random();
+        int  randomVehicle = rand.nextInt(vehicles.size()) + 0;
+        return vehicles.get(randomVehicle);
     }
 }

@@ -56,8 +56,9 @@ public class Runner {
                         System.out.println(mothra.attack(input2, vehicles));
                         mothra.checkDeath();
                         System.out.println(vehicles.allDestroyed());
-                        System.out.println(vehicles.getRandomVehicle().attack(mothra) + "\n");
-                        System.out.println("Press any key to attack again or q to quit");
+                        System.out.println(vehicles.getRandomVehicle().attack(mothra) + "\n" + mothra.getName() + " health: "
+                        + mothra.getHealthValue());
+                        System.out.println("Press any key to attack again or q to change monster");
                         answer = scanner.nextLine();
                         System.out.println(mothra.move());
                         System.out.println(mothra.roar() + "\n");
@@ -73,8 +74,8 @@ public class Runner {
                         System.out.println(godzilla.attack(input2, vehicles));
                         godzilla.checkDeath();
                         System.out.println(vehicles.allDestroyed());
-                        System.out.println(vehicles.getRandomVehicle().attack(godzilla) + "\n");
-                        System.out.println("Press any key to attack again or q to quit");
+                        System.out.println(vehicles.getRandomVehicle().attack(godzilla) + "\n" + godzilla.getName() + " health: " + godzilla.getHealthValue());
+                        System.out.println("Press any key to attack again or q to change monster");
                         answer2 = scanner.nextLine();
                         System.out.println(godzilla.move());
                         System.out.println(godzilla.roar()+ "\n");

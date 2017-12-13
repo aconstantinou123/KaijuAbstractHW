@@ -55,4 +55,13 @@ public class Vehicles {
         int  randomVehicle = rand.nextInt(vehicles.size()) + 0;
         return vehicles.get(randomVehicle);
     }
+
+    public boolean checkVehiclesDestroyed(){
+        boolean result = false;
+        if (this.getVehicles().size() == 0) {
+            result = true;
+        }
+        return result;
+
+    }
 }
